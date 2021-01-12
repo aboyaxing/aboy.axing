@@ -7,14 +7,15 @@ var gl;
 
 var points = [];
 
-var numTimesToSubdivide = 1;
+var numTimesToSubdivide = 3;
 
-function getNumber() {
-	numTimesToSubdivide=document.getElementById("num").value;
-}
 
 window.onload = function() {
 	initTriangles();
+}
+
+function getNumber() {
+	numTimesToSubdivide = document.getElementById("cut").value;
 }
 
 function initTriangles(){

@@ -53,6 +53,6 @@ window.onload = function init() {
 
 function render() {
     gl.clear( gl.COLOR_BUFFER_BIT );
-    gl.drawArrays( gl.TRIANGLES, 0, 6 );
-    gl.drawArrays( gl.TRIANGLES, 6, 9 );
+    gl.drawArrays( gl.TRIANGLES, 0, 9 );
+
 }

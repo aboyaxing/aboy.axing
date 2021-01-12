@@ -2,8 +2,19 @@
 
 var gl;
 var points;
-
-window.onload = function init() {
+var a = 0.0, b = 0.5;
+function changebig(){
+    a *= 2;
+    b *= 2;
+}
+function changesmall(){
+    a /= 2;
+    b /= 2;
+}
+window.onload = function (){
+    init();
+}
+function init() {
     var canvas = document.getElementById("triangle-canvas");
     gl = WebGLUtils.setupWebGL( canvas );
     if( !gl ) {
@@ -12,9 +23,9 @@ window.onload = function init() {
 
     // nine Vertices
     var vertices = new Float32Array([
-         0.0,  1.0,  0.0,  0.0,  1.0,
-        -1.0, -1.0,  1.0,  0.0,  0.0,
-         1.0, -1.0,  0.0,  1.0,  0.0,
+         a,  b,  0.0,  0.0,  1.0,
+        -b, -b,  1.0,  0.0,  0.0,
+         b, -b,  0.0,  1.0,  0.0,
     ]);
     var FSIZE = vertices.BYTES_PER_ELEMENT;
 

@@ -10,8 +10,8 @@
         varying vec4 color;
     
         void main(){
-            gl_Position = vec4( vPosition, 1.0 );
-            color = vec4( vColor, 1.0 );
+            gl_Position = vec4(vPosition, 1.0);
+            color = vec4(vColor, 1.0);
         }
 	</script>
 
@@ -32,10 +32,11 @@
 </head>
 
 <body>
-    <h2>Sierpinski Gasket in 3D</h2>
-    <input type="text" id="num" value="1" />
+    <h2>三维效果的Sierpinski Gasket</h2>
+    <canvas id="gl-canvas" width="512" height="512">你的浏览器不支持HTML5 canvas元素</canvas><br />
+    <p>控制</p>
+    剖分次数 0<input type="range" id="num" min="0" max="7" value="1">7<br />
     <button onclick="getNumber();init()">确认</button>
-    <canvas id="gl-canvas" width="512" height="512">你的浏览器不支持HTML5 canvas元素</canvas>
 </body>
 
 </html>
